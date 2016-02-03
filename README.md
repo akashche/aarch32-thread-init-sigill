@@ -29,14 +29,14 @@ Excerpts from the execution trace:
     strex   r9, lr, [r9]
     SIGILL
 
-####Details:
+####Details
 
  - hotspot error report: [hs_err_pid15670.log](https://github.com/akashche/aarch32-thread-init-sigill/blob/master/hs_err_pid15670.log)
  - shortened execution trace: [gdb_short.txt](https://github.com/akashche/aarch32-thread-init-sigill/blob/master/gdb_short.txt) (980 lines).
  - full execution trace: [gdb.txt.xz](https://github.com/akashche/aarch32-thread-init-sigill/blob/master/gdb.txt.xz) (50 MB).
  - [.gdbinit](https://github.com/akashche/aarch32-thread-init-sigill/blob/master/.gdbinit) and [commands.txt](https://github.com/akashche/aarch32-thread-init-sigill/blob/master/commands.txt) used to record the trace
 
-####Misc:
+####Misc
 
 Trace stripping grep:
 
