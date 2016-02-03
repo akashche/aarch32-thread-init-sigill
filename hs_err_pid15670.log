@@ -1,0 +1,401 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGILL (0x4) at pc=0xb2885ae4, pid=15670, tid=15673
+#
+# JRE version:  (9.0) (build )
+# Java VM: OpenJDK  VM (9-internal+0-2016-02-02-142846.alex.jdk9, interpreted mode, serial gc, linux-aarch32)
+# Problematic frame:
+# j  java.lang.Thread.<init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V+26
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/libexec/abrt-hook-ccpp %s %c %p %u %g %t %e %P %I" (or dumping to /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/core.15670)
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: 
+
+Host: 35d19ca4ab6c, rev 4 (v7l), 2 cores, 994M, Fedora release 23 (Twenty Three)
+Time: Wed Feb  3 05:40:26 2016 EST elapsed time: 2620 seconds (0d 0h 43m 40s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0xb490fc00):  JavaThread "Unknown thread" [_thread_in_Java, id=15673, stack(0xb4a02000,0xb4c02000)]
+
+Stack: [0xb4a02000,0xb4c02000],  sp=0xb4c00914,  free space=2042k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+j  java.lang.Thread.<init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V+26
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x474748]  JavaCalls::call_helper(JavaValue*, methodHandle const&, JavaCallArguments*, Thread*)+0x5b8
+V  [libjvm.so+0x7137a8]  os::os_exception_wrapper(void (*)(JavaValue*, methodHandle const&, JavaCallArguments*, Thread*), JavaValue*, methodHandle const&, JavaCallArguments*, Thread*)+0x54
+V  [libjvm.so+0x474150]  JavaCalls::call(JavaValue*, methodHandle const&, JavaCallArguments*, Thread*)+0xa4
+V  [libjvm.so+0x473968]  JavaCalls::call_special(JavaValue*, KlassHandle, Symbol*, Symbol*, JavaCallArguments*, Thread*)+0x12c
+V  [libjvm.so+0x473c50]  JavaCalls::call_special(JavaValue*, Handle, KlassHandle, Symbol*, Symbol*, Handle, Handle, Thread*)+0xb8
+V  [libjvm.so+0x86a81c]  create_initial_thread(Handle, JavaThread*, Thread*)+0x1ac
+V  [libjvm.so+0x873584]  Threads::initialize_java_lang_classes(JavaThread*, Thread*)+0x1e0
+V  [libjvm.so+0x873e80]  Threads::create_vm(JavaVMInitArgs*, bool*)+0x56c
+V  [libjvm.so+0x4d07f8]  JNI_CreateJavaVM_inner(JavaVM_**, void**, void*)+0x108
+V  [libjvm.so+0x4d0ad8]  JNI_CreateJavaVM+0x48
+C  [libjli.so+0xc888]  InitializeJVM+0x178
+C  [libjli.so+0x9a1c]  JavaMain+0xc0
+C  [libpthread.so.0+0x6100]  start_thread+0xd0
+C  [libc.so.6+0xe0250]
+
+
+siginfo: si_signo: 4 (SIGILL), si_code: 1 (ILL_ILLOPC), si_addr: 0xb2885ae4
+
+Register to memory mapping:
+
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+
+
+Registers:
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+NOT SUPPORTED
+
+Top of Stack: (sp=0xb4c00914)
+0xb4c00914:   a2c05688 b4c00918 a27d83fa b4c00948
+0xb4c00924:   a2848570 00000000 a27d8430 00000000
+0xb4c00934:   b4c00940 b4c0097c b286b584 a2c05800
+0xb4c00944:   a2c05178 a2c05688 b4c009d8 b4c00bf8
+0xb4c00954:   0000000a b595e9a8 b286b500 b4c00b5c
+0xb4c00964:   a27d8430 b4c00fb0 b6fef4c0 00000000
+0xb4c00974:   b490fc00 b4c00a14 b5240748 b287bc80
+0xb4c00984:   b4c00b5c 00000003 b490fc00 b490fc00 
+
+Instructions: (pc=0xb2885ae4)
+0xb2885ac4:   84 98 0c e3 91 94 4b e3 9f 0f 99 e1 03 e0 80 e0
+0xb2885ad4:   00 00 5e e1 34 00 00 3a 0c 00 5e e1 32 00 00 8a
+0xb2885ae4:   9e 9f 89 e1 f0 01 f0 e7 f1 ff ff 1a 90 90 98 e5
+0xb2885af4:   03 90 89 e0 90 90 88 e5 08 30 43 e2 00 00 53 e3 
+
+new  187 new  [0xb2885a40, 0xb2885ca0]  608 bytes
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0xb490fc00 JavaThread "Unknown thread" [_thread_in_Java, id=15673, stack(0xb4a02000,0xb4c02000)]
+
+Other Threads:
+  0xb49b3c00 VMThread [stack: 0xa25b4000,0xa27b4000] [id=15674]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ def new generation   total 4864K, used 22K [0xa2c00000, 0xa3140000, 0xa7f40000)
+  eden space 4352K,   0% used [0xa2c00000, 0xa2c05830, 0xa3040000)
+  from space 512K,   0% used [0xa3040000, 0xa3040000, 0xa30c0000)
+  to   space 512K,   0% used [0xa30c0000, 0xa30c0000, 0xa3140000)
+ tenured generation   total 11008K, used 0K [0xa7f40000, 0xa8a00000, 0xb2600000)
+   the space 11008K,   0% used [0xa7f40000, 0xa7f40000, 0xa7f40200, 0xa8a00000)
+ Metaspace       used 614K, capacity 2200K, committed 2200K, reserved 4400K
+
+Card table byte_map: [0xb26f3000,0xb2771000] byte_map_base: 0xb21dd000
+
+Polling page: 0xb6ffb000
+
+CodeCache: size=32768Kb used=1507Kb max_used=1507Kb free=31260Kb
+ bounds [0xb27f1000, 0xb2971000, 0xb47f1000]
+ total_blobs=366 nmethods=0 adapters=332
+ compilation: disabled (interpreter mode)
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 2.759 loading class java/lang/RuntimePermission
+Event: 2.760 loading class java/security/BasicPermission
+Event: 2.763 loading class java/security/Permission
+Event: 2.764 loading class java/security/Guard
+Event: 2.765 loading class java/security/Guard done
+Event: 2.767 loading class java/security/Permission done
+Event: 2.769 loading class java/security/BasicPermission done
+Event: 2.770 loading class java/lang/RuntimePermission done
+Event: 2.776 loading class java/lang/StringUTF16
+Event: 2.786 loading class java/lang/StringUTF16 done
+
+
+Dynamic libraries:
+00010000-00011000 r-xp 00000000 fd:01 544238     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/bin/java
+00020000-00021000 r--p 00000000 fd:01 544238     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/bin/java
+00021000-00022000 rw-p 00001000 fd:01 544238     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/bin/java
+00022000-00043000 rw-p 00000000 00:00 0          [heap]
+a1f03000-a2400000 rw-p 00000000 00:00 0 
+a2400000-a2421000 rw-p 00000000 00:00 0 
+a2421000-a2500000 ---p 00000000 00:00 0 
+a2580000-a25b4000 rw-p 00000000 00:00 0 
+a25b4000-a25b5000 ---p 00000000 00:00 0 
+a25b5000-a29da000 rw-p 00000000 00:00 0          [stack:15674]
+a29da000-a2c00000 ---p 00000000 00:00 0 
+a2c00000-a3140000 rw-p 00000000 00:00 0 
+a3140000-a7f40000 ---p 00000000 00:00 0 
+a7f40000-a8a00000 rw-p 00000000 00:00 0 
+a8a00000-b2600000 ---p 00000000 00:00 0 
+b261c000-b26a5000 rw-p 00000000 00:00 0 
+b26a5000-b26f3000 ---p 00000000 00:00 0 
+b26f3000-b26f6000 rw-p 00000000 00:00 0 
+b26f6000-b271c000 ---p 00000000 00:00 0 
+b271c000-b2722000 rw-p 00000000 00:00 0 
+b2722000-b2770000 ---p 00000000 00:00 0 
+b2770000-b2777000 rw-p 00000000 00:00 0 
+b2777000-b27f1000 ---p 00000000 00:00 0 
+b27f1000-b2971000 rwxp 00000000 00:00 0 
+b2971000-b47f1000 ---p 00000000 00:00 0 
+b47f1000-b47ff000 r-xp 00000000 fd:01 544224     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/libjimage.so
+b47ff000-b480e000 ---p 0000e000 fd:01 544224     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/libjimage.so
+b480e000-b480f000 r--p 0000d000 fd:01 544224     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/libjimage.so
+b480f000-b4810000 rw-p 00000000 00:00 0 
+b4810000-b4839000 r-xp 00000000 fd:01 544222     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/libzip.so
+b4839000-b4848000 ---p 00029000 fd:01 544222     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/libzip.so
+b4848000-b4849000 r--p 00028000 fd:01 544222     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/libzip.so
+b4849000-b484a000 rw-p 00029000 fd:01 544222     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/libzip.so
+b484a000-b485a000 rw-s 00000000 fd:01 138317     /tmp/hsperfdata_alex/15670
+b485a000-b4865000 r-xp 00000000 fd:01 136534     /usr/lib/libnss_files-2.22.so
+b4865000-b4874000 ---p 0000b000 fd:01 136534     /usr/lib/libnss_files-2.22.so
+b4874000-b4875000 r--p 0000a000 fd:01 136534     /usr/lib/libnss_files-2.22.so
+b4875000-b4876000 rw-p 0000b000 fd:01 136534     /usr/lib/libnss_files-2.22.so
+b4876000-b487c000 rw-p 00000000 00:00 0 
+b4887000-b48b7000 r-xp 00000000 fd:01 544220     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/libjava.so
+b48b7000-b48c6000 ---p 00030000 fd:01 544220     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/libjava.so
+b48c6000-b48c7000 r--p 0002f000 fd:01 544220     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/libjava.so
+b48c7000-b48c8000 rw-p 00030000 fd:01 544220     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/libjava.so
+b48c8000-b48d8000 r-xp 00000000 fd:01 544218     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/libverify.so
+b48d8000-b48e7000 ---p 00010000 fd:01 544218     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/libverify.so
+b48e7000-b48e8000 r--p 0000f000 fd:01 544218     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/libverify.so
+b48e8000-b48e9000 rw-p 00010000 fd:01 544218     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/libverify.so
+b48e9000-b48ef000 r-xp 00000000 fd:01 136631     /usr/lib/librt-2.22.so
+b48ef000-b48fe000 ---p 00006000 fd:01 136631     /usr/lib/librt-2.22.so
+b48fe000-b48ff000 r--p 00005000 fd:01 136631     /usr/lib/librt-2.22.so
+b48ff000-b4900000 rw-p 00006000 fd:01 136631     /usr/lib/librt-2.22.so
+b4900000-b49fa000 rw-p 00000000 00:00 0 
+b49fa000-b4a00000 ---p 00000000 00:00 0 
+b4a02000-b4a05000 ---p 00000000 00:00 0 
+b4a05000-b4c02000 rw-p 00000000 00:00 0          [stack:15673]
+b4c02000-b4c6f000 r-xp 00000000 fd:01 136444     /usr/lib/libm-2.22.so
+b4c6f000-b4c7e000 ---p 0006d000 fd:01 136444     /usr/lib/libm-2.22.so
+b4c7e000-b4c7f000 r--p 0006c000 fd:01 136444     /usr/lib/libm-2.22.so
+b4c7f000-b4c80000 rw-p 0006d000 fd:01 136444     /usr/lib/libm-2.22.so
+b4c80000-b4db4000 r-xp 00000000 fd:01 136667     /usr/lib/libstdc++.so.6.0.21
+b4db4000-b4dc3000 ---p 00134000 fd:01 136667     /usr/lib/libstdc++.so.6.0.21
+b4dc3000-b4dc8000 r--p 00133000 fd:01 136667     /usr/lib/libstdc++.so.6.0.21
+b4dc8000-b4dca000 rw-p 00138000 fd:01 136667     /usr/lib/libstdc++.so.6.0.21
+b4dca000-b4dcc000 rw-p 00000000 00:00 0 
+b4dcc000-b593e000 r-xp 00000000 fd:01 544200     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/server/libjvm.so
+b593e000-b594e000 ---p 00b72000 fd:01 544200     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/server/libjvm.so
+b594e000-b5961000 r--p 00b72000 fd:01 544200     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/server/libjvm.so
+b5961000-b5974000 rw-p 00b85000 fd:01 544200     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/server/libjvm.so
+b5974000-b6de0000 rw-p 00000000 00:00 0 
+b6de0000-b6dfd000 r-xp 00000000 fd:01 136351     /usr/lib/libgcc_s-5.3.1-20151207.so.1
+b6dfd000-b6e0c000 ---p 0001d000 fd:01 136351     /usr/lib/libgcc_s-5.3.1-20151207.so.1
+b6e0c000-b6e0d000 rw-p 0001c000 fd:01 136351     /usr/lib/libgcc_s-5.3.1-20151207.so.1
+b6e0d000-b6f4c000 r-xp 00000000 fd:01 136258     /usr/lib/libc-2.22.so
+b6f4c000-b6f5b000 ---p 0013f000 fd:01 136258     /usr/lib/libc-2.22.so
+b6f5b000-b6f5d000 r--p 0013e000 fd:01 136258     /usr/lib/libc-2.22.so
+b6f5d000-b6f5e000 rw-p 00140000 fd:01 136258     /usr/lib/libc-2.22.so
+b6f5e000-b6f61000 rw-p 00000000 00:00 0 
+b6f61000-b6f65000 r-xp 00000000 fd:01 136298     /usr/lib/libdl-2.22.so
+b6f65000-b6f74000 ---p 00004000 fd:01 136298     /usr/lib/libdl-2.22.so
+b6f74000-b6f75000 r--p 00003000 fd:01 136298     /usr/lib/libdl-2.22.so
+b6f75000-b6f76000 rw-p 00004000 fd:01 136298     /usr/lib/libdl-2.22.so
+b6f76000-b6f95000 r-xp 00000000 fd:01 544227     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/jli/libjli.so
+b6f95000-b6fa4000 ---p 0001f000 fd:01 544227     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/jli/libjli.so
+b6fa4000-b6fa5000 r--p 0001e000 fd:01 544227     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/jli/libjli.so
+b6fa5000-b6fa6000 rw-p 0001f000 fd:01 544227     /home/alex/jdk9/build/linux-aarch32-normal-core-slowdebug/jdk/lib/aarch32/jli/libjli.so
+b6fa6000-b6fbb000 r-xp 00000000 fd:01 136606     /usr/lib/libpthread-2.22.so
+b6fbb000-b6fcb000 ---p 00015000 fd:01 136606     /usr/lib/libpthread-2.22.so
+b6fcb000-b6fcc000 r--p 00015000 fd:01 136606     /usr/lib/libpthread-2.22.so
+b6fcc000-b6fcd000 rw-p 00016000 fd:01 136606     /usr/lib/libpthread-2.22.so
+b6fcd000-b6fcf000 rw-p 00000000 00:00 0 
+b6fcf000-b6fee000 r-xp 00000000 fd:01 136195     /usr/lib/ld-2.22.so
+b6fef000-b6ff1000 rw-p 00000000 00:00 0 
+b6ff7000-b6ffb000 rw-p 00000000 00:00 0 
+b6ffb000-b6ffc000 r--p 00000000 00:00 0 
+b6ffc000-b6ffd000 rw-p 00000000 00:00 0 
+b6ffd000-b6ffe000 r-xp 00000000 00:00 0          [sigpage]
+b6ffe000-b6fff000 r--p 0001f000 fd:01 136195     /usr/lib/ld-2.22.so
+b6fff000-b7000000 rw-p 00020000 fd:01 136195     /usr/lib/ld-2.22.so
+befdf000-bf000000 rw-p 00000000 00:00 0          [stack]
+ffff0000-ffff1000 r-xp 00000000 00:00 0          [vectors]
+
+VM Arguments:
+java_command: <unknown>
+java_class_path (initial): .
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/alex/.local/bin:/home/alex/bin
+SHELL=/bin/bash
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x8d81cc], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0x8d81cc], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8d81cc], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x710680], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x710680], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8d81cc], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR2: [libjvm.so+0x70fc94], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGQUIT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Fedora release 23 (Twenty Three)
+uname:Linux 35d19ca4ab6c 4.0.4-301.fc22.armv7hl #1 SMP Thu May 21 14:37:41 UTC 2015 armv7l
+libc:glibc 2.22 NPTL 2.22 
+rlimit: STACK 8192k, CORE infinity, NPROC 1048576, NOFILE 1048576, AS infinity
+load average:1.50 1.39 1.38
+
+/proc/meminfo:
+MemTotal:        1018092 kB
+MemFree:            9452 kB
+MemAvailable:     576364 kB
+Buffers:            9348 kB
+Cached:           536048 kB
+SwapCached:         1352 kB
+Active:           481968 kB
+Inactive:         435304 kB
+Active(anon):     203656 kB
+Inactive(anon):   168624 kB
+Active(file):     278312 kB
+Inactive(file):   266680 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+HighTotal:        262144 kB
+HighFree:            948 kB
+LowTotal:         755948 kB
+LowFree:            8504 kB
+SwapTotal:        500236 kB
+SwapFree:         463752 kB
+Dirty:               464 kB
+Writeback:           176 kB
+AnonPages:        370988 kB
+Mapped:           180192 kB
+Shmem:               216 kB
+Slab:              73312 kB
+SReclaimable:      36992 kB
+SUnreclaim:        36320 kB
+KernelStack:        1528 kB
+PageTables:         4096 kB
+NFS_Unstable:          0 kB
+Bounce:               60 kB
+WritebackTmp:          0 kB
+CommitLimit:     1009280 kB
+Committed_AS:    1415172 kB
+VmallocTotal:     245760 kB
+VmallocUsed:        4688 kB
+VmallocChunk:     216044 kB
+CmaTotal:          16384 kB
+CmaFree:              60 kB
+
+
+CPU:total 2 0x41:0x0:0xc07:4
+
+/proc/cpuinfo:
+processor	: 0
+model name	: ARMv7 Processor rev 4 (v7l)
+BogoMIPS	: 48.00
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xc07
+CPU revision	: 4
+
+processor	: 1
+model name	: ARMv7 Processor rev 4 (v7l)
+BogoMIPS	: 48.00
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xc07
+CPU revision	: 4
+
+Hardware	: Allwinner sun7i (A20) Family
+Revision	: 0000
+Serial		: 0000000000000000
+
+Memory: 4k page, physical 1018092k(9452k free), swap 500236k(463752k free)
+
+vm_info: OpenJDK  VM (9-internal+0-2016-02-02-142846.alex.jdk9) for linux-aarch32 JRE (9-internal+0-2016-02-02-142846.alex.jdk9), built on Feb  3 2016 04:12:57 by "alex" with gcc 5.3.1 20151207 (Red Hat 5.3.1-2)
+
+END.

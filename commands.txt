@@ -1,0 +1,11 @@
+set height 0
+break create_initial_thread
+run
+break JavaCalls::call_helper
+continue
+next 25
+set logging on
+while 1
+x/i $pc
+stepi
+end
