@@ -32,8 +32,8 @@ Excerpts from the execution trace:
 ####Details
 
  - hotspot error report: [hs_err_pid15670.log](https://github.com/akashche/aarch32-thread-init-sigill/blob/master/hs_err_pid15670.log)
- - shortened execution trace: [gdb_short.txt](https://github.com/akashche/aarch32-thread-init-sigill/blob/master/gdb_short.txt) (980 lines).
- - full execution trace: [gdb.txt.xz](https://github.com/akashche/aarch32-thread-init-sigill/blob/master/gdb.txt.xz) (50 MB).
+ - shortened execution trace (980 lines): [gdb_short.txt](https://github.com/akashche/aarch32-thread-init-sigill/blob/master/gdb_short.txt)
+ - full execution trace (50 MB): [gdb.txt.xz](https://github.com/akashche/aarch32-thread-init-sigill/blob/master/gdb.txt.xz)
  - [.gdbinit](https://github.com/akashche/aarch32-thread-init-sigill/blob/master/.gdbinit) and [commands.txt](https://github.com/akashche/aarch32-thread-init-sigill/blob/master/commands.txt) used to record the trace
 
 ####Misc
